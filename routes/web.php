@@ -2,8 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\ProductController;
 
 Route::resource('produk', ProdukController::class); // 7 route CRUD sekaligus
+
+Route::get('/products',[ProductController::class,'index']);
+/* Route::get('/products/{id}',
+  function ($id) {
+    return 'Produk #' . $id;
+  }); */
+
+Route::get('/products/{id}',[ProductController::class,'show']);
 
 Route::get('/', function () {
     return view('welcome');
