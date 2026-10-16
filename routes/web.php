@@ -22,7 +22,7 @@ Route::get('/halo', function () {
     return 'Halo, selamat datang di Laravel 13!';
 });
 
-// Arrow function (lebih ringkas)
+// Arrow function 'lebih ringkas'
 Route::get('/waktu', fn () => now()->format('d-m-Y H:i:s'));
 
 // Parameter wajib
